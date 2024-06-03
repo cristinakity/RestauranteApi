@@ -1,0 +1,31 @@
+@base_url = http://localhost:3000
+
+GET {{base_url}}
+
+### Usuarios
+
+GET {{base_url}}/usuarios
+
+###
+
+GET {{base_url}}/usuarios/665d329e72ce72d039c365ba
+
+###
+
+POST {{base_url}}/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Test user {{$timestamp}}",
+  "email": "{{$guid}}@fakeemail.com"
+}
+
+###
+
+PUT {{base_url}}/usuarios/665d329e72ce72d039c365ba
+Content-Type: application/json
+
+{
+  "nombre": "Test user {{$timestamp}} updated",
+  "email": "{{$guid}}@fakeemail.com"
+}
